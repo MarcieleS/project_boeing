@@ -1,7 +1,6 @@
 -- Query to calculate the average number of passengers on Boeing flights
 -- for aircraft with a capacity greater than 200 passengers.
 
-
 SELECT 
    ba_aircraft.manufacturer, -- Select the manufacturer of the aircraft
    ROUND(AVG(ba_flights.total_passengers), 1) -- Calculate the average number of passengers, rounded to 1 decimal
@@ -20,4 +19,10 @@ WHERE ba_fuel_efficiency.capacity > 200
 
 -- Group results by manufacturer
 GROUP BY ba_aircraft.manufacturer;
+
+
+
+
+
+
 
