@@ -26,6 +26,4 @@ Currently, the project does not require any external libraries, but you might ne
 1. Make sure you have a database set up with the `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency` tables.
 2. Run the SQL query in your database to get the result of the average passengers for Boeing aircraft with a capacity greater than 200.
 
-## Note
 
-The project is still in progress, and the Tableau charts are yet to be implemented.
