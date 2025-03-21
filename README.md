@@ -26,4 +26,12 @@ Currently, the project does not require any external libraries, but you might ne
 1. Make sure you have a database set up with the `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency` tables.
 2. Run the SQL query in your database to get the result of the average passengers for Boeing aircraft with a capacity greater than 200.
 
+### **Final Analysis: Average Passengers on Boeing Flights**  
+
+The SQL query was designed to calculate the average number of passengers per flight for Boeing aircraft with a capacity greater than 200 seats. The final result obtained was:  
+
+- **Average passengers per flight: 46,750**  
+
+The query utilized joins between the `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency` tables, along with an aggregation function (`AVG() OVER(PARTITION BY)`) to compute the average while maintaining visibility of individual values.  
+
 
