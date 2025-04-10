@@ -38,7 +38,7 @@ The complete SQL script is available in: `/query/queries.sql`
 
 ## Visual Analysis
 
-<img src="./images/chart_boeing.png" alt="Chart Boeing" width="600"/>
+<img src="./images/chart_boeing.png" alt="Chart Boeing" width="400"/>
 
 > The chart was developed using Tableau.
 
