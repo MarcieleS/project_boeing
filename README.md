@@ -1,37 +1,58 @@
-README 
+# Aircraft Manufacturer Analysis
 
-# Boeing Flight Analysis
+## Objective
 
-This project aims to calculate the average number of passengers (rounded to 1 decimal) on flights from the manufacturer Boeing, considering aircraft with a capacity greater than 200 passengers. The SQL query presented uses three tables: `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency`.
+The initial objective of this project was to calculate the average number of passengers on Boeing flights, considering only aircraft with a capacity greater than 200 passengers.
+
+This analysis was developed using SQL, working with three datasets:
+- `ba_aircraft`: Aircraft details.
+- `ba_flights`: Flight data.
+- `ba_fuel_efficiency`: Aircraft capacity and fuel efficiency.
+
+---
 
 ## How It Works
 
-The SQL query joins the `ba_flights` and `ba_aircraft` tables based on the `flight_id`, and the `ba_aircraft` and `ba_fuel_efficiency` tables based on the `ac_subtype`. It filters the results to include only Boeing aircraft with a capacity greater than 200 passengers. Then, it calculates the average number of passengers for those flights.
+1. Join the datasets based on the aircraft and flight information.
+2. Filter only aircraft with capacity greater than 200 seats.
+3. Calculate the average number of passengers per flight.
+4. Expand the analysis to compare all manufacturers.
 
-### Tables Involved:
-- `ba_aircraft`: Contains information about the aircraft.
-- `ba_flights`: Contains data about the flights.
-- `ba_fuel_efficiency`: Contains data on aircraft fuel efficiency, including their capacity.
+---
 
-### Columns Required:
-- `ba_aircraft.manufacturer`: Manufacturer of the aircraft.
-- `ba_flights.total_passengers`: Total number of passengers on the flight.
-- `ba_fuel_efficiency.capacity`: Capacity of the aircraft.
+## Tables Used
 
-### Dependencies
-Currently, the project does not require any external libraries, but you might need to set up access to a database where the tables are stored.
+| Table               | Description                         |
+|--------------------|-------------------------------------|
+| `ba_aircraft`      | Aircraft details and manufacturer.  |
+| `ba_flights`       | Flight information and passengers.  |
+| `ba_fuel_efficiency`| Aircraft capacity and efficiency.  |
 
-### How to Run
+---
 
-1. Make sure you have a database set up with the `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency` tables.
-2. Run the SQL query in your database to get the result of the average passengers for Boeing aircraft with a capacity greater than 200.
+## Final Query
 
-### **Final Analysis: Average Passengers on Boeing Flights**  
+The complete SQL script is available in: `/query/queries.sql`
 
-The SQL query was designed to calculate the average number of passengers per flight for Boeing aircraft with a capacity greater than 200 seats. The final result obtained was:  
+---
 
-- **Average passengers per flight: 46,750**  
+## Visual Analysis
 
-The query utilized joins between the `ba_aircraft`, `ba_flights`, and `ba_fuel_efficiency` tables, along with an aggregation function (`AVG() OVER(PARTITION BY)`) to compute the average while maintaining visibility of individual values.  
+![Average Passengers per Manufacturer](./images/chart_boeing.png)
+
+> The chart was developed using Tableau.
+
+---
+
+## Final Considerations
+
+Although the initial exercise required calculating the average number of passengers only for Boeing aircraft, I chose to expand the analysis to compare other manufacturers as well.
+
+This approach adds more value to the project by providing a richer and more comprehensive analysis.
+
+The results showed that Boeing and Embraer have the highest average number of passengers per flight, considering aircraft with a capacity greater than 200 seats.
+
+
+
 
 
